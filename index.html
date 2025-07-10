@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VELNOR | Fashion for All</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans relative">
+
+  <!-- Cart Button Top Right -->
+  <div class="absolute top-6 right-6 z-50">
+    <a href="cart.html"
+       class="bg-[#d6bfa9] text-[#4b2e2b] px-5 py-2 rounded-full shadow-md hover:bg-[#c5a78f] hover:text-white transition font-medium tracking-wide">
+      🛒 Cart
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen w-full">
+    <img src="images/velnor2.jpg" alt="Hero Image"
+         class="absolute w-full h-full object-cover brightness-[.6]" />
+    
+    <!-- Tagline Top Left -->
+    <div class="absolute top-6 left-6 text-white text-sm md:text-base font-medium tracking-wide">
+      For Women and Men
+    </div>
+
+    <!-- Brand Name Centered -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h1 class="text-white text-4xl md:text-6xl font-bold tracking-widest drop-shadow-lg">VELNOR</h1>
+    </div>
+  </section>
+
+  <!-- Shop by Category -->
+  <section class="text-center py-12">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-10 tracking-tight">Shop by Category</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 max-w-7xl mx-auto">
+      
+      <!-- Top -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+        <img src="images/top.jpg" alt="Tops" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"/>
+        <a href="tops.html" class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-lg font-medium opacity-0 group-hover:opacity-100 transition">
+          Top
+        </a>
+      </div>
+
+      <!-- Bottom -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+        <img src="images/pants.jpg" alt="Bottoms" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"/>
+        <a href="bottoms.html" class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-lg font-medium opacity-0 group-hover:opacity-100 transition">
+          Bottom
+        </a>
+      </div>
+
+      <!-- Accessories -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+        <img src="images/accesories.jpg" alt="Accessories" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"/>
+        <a href="accessories.html" class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-lg font-medium opacity-0 group-hover:opacity-100 transition">
+          Accessories
+        </a>
+      </div>
+
+      <!-- Shoes -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+        <img src="images/shoes.jpg" alt="Shoes" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"/>
+        <a href="shoes.html" class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-lg font-medium opacity-0 group-hover:opacity-100 transition">
+          Shoes
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#f7f2ec] py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h3 class="text-xl font-semibold text-[#4b2e2b] mb-4">Follow Us</h3>
+      <div class="flex justify-center gap-6 mb-4">
+        <!-- Instagram -->
+        <a href="#" target="_blank" class="hover:scale-110 transition">
+          <svg fill="currentColor" class="w-6 h-6 text-[#4b2e2b] hover:text-pink-600" viewBox="0 0 24 24">
+            <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.25-2.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"/>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a href="#" target="_blank" class="hover:scale-110 transition">
+          <svg fill="currentColor" class="w-6 h-6 text-[#4b2e2b] hover:text-blue-600" viewBox="0 0 24 24">
+            <path d="M22 12.07C22 6.55 17.52 2 12 2S2 6.55 2 12.07c0 5 3.66 9.13 8.44 9.88v-6.99H8.08v-2.89h2.36V9.41c0-2.33 1.38-3.62 3.5-3.62.7 0 1.43.12 1.43.12v1.57h-.8c-.79 0-1.03.49-1.03 1v1.2h2.5l-.4 2.89h-2.1v6.99C18.34 21.2 22 17.07 22 12.07z"/>
+          </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a href="#" target="_blank" class="hover:scale-110 transition">
+          <svg fill="currentColor" class="w-6 h-6 text-[#4b2e2b] hover:text-black" viewBox="0 0 24 24">
+            <path d="M9.75 4.5v11.063a2.188 2.188 0 1 1-2.188-2.188 2.25 2.25 0 0 1 .563.076V11.25a5.25 5.25 0 1 0 5.25 5.25V9.206a6.95 6.95 0 0 0 3.938 1.244V7.5a4.5 4.5 0 0 1-4.5-4.5h-3.063z"/>
+          </svg>
+        </a>
+      </div>
+      <p class="text-sm text-[#4b2e2b]">&copy; 2025 VELNOR. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

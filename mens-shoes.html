@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VELNOR | Men's Shoes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Cart Button -->
+  <div class="w-full px-6 pt-6 flex justify-end">
+    <a href="cart.html" class="bg-gray-900 text-white px-5 py-2 rounded-full hover:bg-gray-700 transition font-medium shadow-lg">
+      🛒 Go to Cart
+    </a>
+  </div>
+
+  <section class="py-10 px-6 max-w-7xl mx-auto">
+
+    <!-- Title -->
+    <div class="text-center mb-12 fade-in">
+      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900">Men's Shoes</h1>
+      <div class="w-20 h-1 bg-gray-800 mx-auto mt-3 rounded-full"></div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 fade-in">
+
+      <!-- Shoe 1 -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl overflow-hidden transition">
+        <img src="images/m-shoes1.jpg" alt="Leather Loafers" class="w-full h-80 object-contain bg-gray-50 p-4">
+        <div class="p-5 text-center">
+          <h3 class="font-semibold text-lg mb-1">Leather Loafers</h3>
+          <p class="text-gray-500 mb-3">$68.00</p>
+          <button onclick="addToCart(this)" class="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-700 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Shoe 2 -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl overflow-hidden transition">
+        <img src="images/m-shoes2.jpg" alt="High-Top Sneakers" class="w-full h-80 object-contain bg-gray-50 p-4">
+        <div class="p-5 text-center">
+          <h3 class="font-semibold text-lg mb-1">High-Top Sneakers</h3>
+          <p class="text-gray-500 mb-3">$72.00</p>
+          <button onclick="addToCart(this)" class="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-700 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Shoe 3 -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl overflow-hidden transition">
+        <img src="images/m-shoes3.jpg" alt="Casual Slip-Ons" class="w-full h-80 object-contain bg-gray-50 p-4">
+        <div class="p-5 text-center">
+          <h3 class="font-semibold text-lg mb-1">Casual Slip-Ons</h3>
+          <p class="text-gray-500 mb-3">$58.00</p>
+          <button onclick="addToCart(this)" class="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-700 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Shoe 4 -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl overflow-hidden transition">
+        <img src="images/m-shoes4.jpg" alt="Brogue Dress Shoes" class="w-full h-80 object-contain bg-gray-50 p-4">
+        <div class="p-5 text-center">
+          <h3 class="font-semibold text-lg mb-1">Brogue Dress Shoes</h3>
+          <p class="text-gray-500 mb-3">$84.00</p>
+          <button onclick="addToCart(this)" class="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-700 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Shoe 5 -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl overflow-hidden transition">
+        <img src="images/m-shoes5.jpg" alt="Classic Trainers" class="w-full h-80 object-contain bg-gray-50 p-4">
+        <div class="p-5 text-center">
+          <h3 class="font-semibold text-lg mb-1">Classic Trainers</h3>
+          <p class="text-gray-500 mb-3">$62.00</p>
+          <button onclick="addToCart(this)" class="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-700 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Shoe 6 -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl overflow-hidden transition">
+        <img src="images/m-shoes6.jpg" alt="Chunky Running Shoes" class="w-full h-80 object-contain bg-gray-50 p-4">
+        <div class="p-5 text-center">
+          <h3 class="font-semibold text-lg mb-1">Chunky Running Shoes</h3>
+          <p class="text-gray-500 mb-3">$69.99</p>
+          <button onclick="addToCart(this)" class="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-700 transition">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Cart Logic -->
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function addToCart(button) {
+      button.innerText = "Added";
+      button.disabled = true;
+      button.classList.remove("bg-gray-900", "hover:bg-gray-700");
+      button.classList.add("bg-green-600");
+
+      const card = button.parentElement.parentElement;
+      const name = card.querySelector("h3").innerText;
+      const image = card.querySelector("img").src;
+      const priceText = card.querySelector("p").innerText;
+      const price = parseFloat(priceText.replace('$', ''));
+
+      cart.push({ name, image, price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+  </script>
+
+</body>
+</html>

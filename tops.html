@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VELNOR | Tops</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Simple fade-in animation */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Tops Section -->
+  <section class="py-20 px-6 max-w-6xl mx-auto">
+    
+    <!-- Section Title -->
+    <div class="text-center mb-16 fade-in-up">
+      <h2 class="text-5xl font-extrabold tracking-tight text-gray-900 mb-4">TOPS</h2>
+      <div class="w-20 h-1 bg-gray-800 mx-auto rounded-full"></div>
+      <p class="text-gray-500 mt-4 text-lg">Choose your style — women’s or men’s fashion</p>
+    </div>
+    
+    <!-- Image Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center fade-in-up">
+      
+      <!-- Women's Tops -->
+      <div class="relative group w-full max-w-md overflow-hidden rounded-2xl shadow-2xl transition transform hover:scale-105">
+        <img src="images/woman-top.jpg" alt="Women's Tops"
+             class="w-full h-full object-cover transition duration-500" />
+        <a href="women's-tops.html"
+           class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition duration-300">
+          Women's Tops
+        </a>
+      </div>
+
+      <!-- Men's Tops -->
+      <div class="relative group w-full max-w-md overflow-hidden rounded-2xl shadow-2xl transition transform hover:scale-105">
+        <img src="images/man-top2.jpg" alt="Men's Tops"
+             class="w-full h-full object-cover transition duration-500" />
+        <a href="man's -top.html"
+           class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition duration-300">
+          Men's Tops
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>

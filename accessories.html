@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VELNOR | Accessories</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Accessories Section -->
+  <section class="py-20 px-4 max-w-6xl mx-auto">
+
+    <!-- Page Title -->
+    <h2 class="text-center text-4xl font-bold tracking-tight mb-16 fade-in">ACCESSORIES</h2>
+
+    <!-- Image Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center fade-in">
+
+      <!-- Women's Accessories -->
+      <div class="relative group w-full max-w-md overflow-hidden rounded-2xl shadow-xl">
+        <img src="images/woman-accessories.jpg" alt="Women's Accessories"
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+        <a href="womens-accessories.html"
+           class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition">
+          Women's Accessories
+        </a>
+      </div>
+
+      <!-- Men's Accessories -->
+      <div class="relative group w-full max-w-md overflow-hidden rounded-2xl shadow-xl">
+        <img src="images/man-accessories.jpg" alt="Men's Accessories"
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+        <a href="mens-accessories.html"
+           class="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition">
+          Men's Accessories
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
